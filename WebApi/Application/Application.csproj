@@ -9,8 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Orders\Commands\" />
     <Folder Include="Orders\Queries\" />
+    <Folder Include="Products\Commands\" />
   </ItemGroup>
 
 </Project>

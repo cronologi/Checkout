@@ -7,11 +7,11 @@ using System.Text;
 
 namespace Persistance.Orders
 {
-    public class OrdersRepository
+    public class OrderRepository
         : Repository<Order>,
-        IOrdersRepository
+        IOrderRepository
     {
-        public OrdersRepository(IDatabaseContext database)
+        public OrderRepository(IDatabaseContext database)
             : base(database) { }
     }
 }

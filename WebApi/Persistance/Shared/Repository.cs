@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Persistance.Shared
 {
@@ -30,14 +31,39 @@ namespace Persistance.Shared
                 .SingleOrDefault(p => p.Id == id);
         }
 
+        public async Task<T> GetAsync(Guid id)
+        {
+            return await _database.Set<T>().FindAsync(id);
+        }
+
         public void Add(T entity)
         {
             _database.Set<T>().Add(entity);
         }
 
+        public async Task AddAsync(T entity)
+        {
+            await _database.Set<T>().AddAsync(entity);
+        }
+
         public void AddRange(IEnumerable<T> entities)
         {
             _database.Set<T>().AddRange(entities);
+        }
+
+        public async Task AddRangeAsync(IEnumerable<T> entities)
+        {
+            await _database.Set<T>().AddRangeAsync(entities);
+        }
+
+        public void Update(T entity)
+        {
+            _database.Set<T>().Update(entity);
+        }
+
+        public void UpdateRange(IEnumerable<T> entities)
+        {
+            _database.Set<T>().UpdateRange(entities);
         }
 
         public void Remove(T entity)

@@ -4,6 +4,7 @@ using Domain.Products;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,9 +16,9 @@ namespace Persistance.Shared
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetail { get; set; }
 
-        public async Task EnsureDatabaseCreated()
+        public void EnsureDatabaseCreated()
         {
-            await Database.EnsureCreatedAsync();
+            Database.EnsureCreated();
         }
 
         public async Task<int> Save()

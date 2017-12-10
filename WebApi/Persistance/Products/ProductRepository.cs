@@ -7,9 +7,9 @@ using System.Text;
 
 namespace Persistance.Products
 {
-    public class ProductsRepository : Repository<Product>, IProductsRepository
+    public class ProductRepository : Repository<Product>, IProductRepository
     {
-        public ProductsRepository(IDatabaseContext database)
+        public ProductRepository(IDatabaseContext database)
             : base(database) { }
     }
 }

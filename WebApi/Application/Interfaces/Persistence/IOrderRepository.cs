@@ -1,11 +1,11 @@
-﻿using Domain.Products;
+﻿using Domain.Orders;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Application.Interfaces.Persistence
 {
-    public interface IProductsRepository : IRepository<Product>
+    public interface IOrderRepository : IRepository<Order>
     {
     }
 }

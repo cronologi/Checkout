@@ -19,7 +19,7 @@ namespace Persistance.Shared
 
         DbSet<T> Set<T>() where T : class, IEntity;
 
-        Task EnsureDatabaseCreated();
+        void EnsureDatabaseCreated();
 
         Task<int> Save();
     }

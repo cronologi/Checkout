@@ -1,16 +1,15 @@
-﻿using Domain.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Domain.Products
+namespace Application.Products.Queries.GetProducts
 {
-    public class Product : IEntity
+    public class ProductModel
     {
+        public Guid Id { get; set; }
+
         public string Name { get; set; }
 
         public decimal Price { get; set; }
-
-        public Guid Id { get; set; }
     }
 }
